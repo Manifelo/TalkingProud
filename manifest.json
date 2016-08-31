@@ -1,0 +1,24 @@
+{
+	"manifest_version" : 2,
+	"name" : "TalkingProud",
+	"version" : "0.1",
+
+	"description" : "Inserts Buffalo Bills Propaganda into a user's web experience",
+
+	"permissions" : [
+		"tabs"
+	],
+
+	"content_scripts" : [{
+			"matches" : [
+				"<all_urls>"
+			],
+			"js" : ["addPropagandaToPage.js"]
+		}
+	],
+
+	"background" : {
+		"scripts" : ["billsProp.js"]
+	}
+
+}
